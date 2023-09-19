@@ -29,6 +29,26 @@ export default function QueryProcessor(query: string): string {
     const z: number = parseInt(largest[3]);
     return (Math.max(x,y,z)).toString();
   }
+  const multiplyMatch = query.match(/What is (\d+) multiplied by (\d+)/);
+  if (multiplyMatch) {
+    const x: number = parseInt(multiplyMatch[1]);
+    const y: number = parseInt(multiplyMatch[2]);
+    return (x+y).toString();
+  }
+  // function extractNumbersFromString(inputString: string): number[] {
+  //   const regex = /\d+/g;
+  //   const matches = inputString.match(regex);
+    
+  //   if (matches) {
+  //     // Convert the matched strings to numbers
+  //     const numbers = matches.map(match => parseInt(match, 10));
+  //     return numbers;
+  //   } else {
+  //     return [];
+  //   }
+  // }
+
+  
 
 
   return "";
