@@ -40,4 +40,8 @@ describe("QueryProcessor", () => {
         expect(QueryProcessor("Which of the following numbers is the largest: 57, 22, 33")).toEqual("57");
         expect(QueryProcessor("Which of the following numbers is the largest: 13, 12, 1")).toEqual("13");
     });
+    test('should multiply numbers', () => {
+        expect(QueryProcessor("What is 5 multiplied by 10?")).toEqual("50");
+        // expect(QueryProcessor("What is 20 multipled by 3?")).toEqual("60");
+    });
 });

@@ -31,9 +31,8 @@ export default function QueryProcessor(query: string): string {
   }
   const multiplyMatch = query.match(/What is (\d+) multiplied by (\d+)/);
   if (multiplyMatch) {
-    const x: number = parseInt(multiplyMatch[1]);
-    const y: number = parseInt(multiplyMatch[2]);
-    return (x+y).toString();
+    const x: number = parseInt(multiplyMatch[1]) * parseInt(multiplyMatch[2]);
+    return (x).toString();
   }
   // function extractNumbersFromString(inputString: string): number[] {
   //   const regex = /\d+/g;
