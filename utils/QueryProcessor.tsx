@@ -42,7 +42,7 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (findPrimesInString(query)) {
-    return findPrimesInString(query).toString();
+    return findPrimesInString(query).join(",");
   }
   function isPrime(number: number): boolean {
     if (number <= 1) return false;
@@ -107,7 +107,7 @@ function findPrimesInString(inputString: string): number[] {
   if (cubeAndSquare) {
     const numbersToCheck = extractNumbersFromString(query);
     const result = findSquareAndCubeNumbers(numbersToCheck);
-    return result.toString();
+    return result.join(",");
   }
 
   
